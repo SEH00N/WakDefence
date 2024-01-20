@@ -1,55 +1,61 @@
 <mxfile host="65bd71144e">
     <diagram id="BKILPW1IuSugFtAOsl0F" name="Page-1">
-        <mxGraphModel dx="3274" dy="2243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="2823" dy="2767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="6" value="Health" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;spacingTop=0;spacingBottom=0;spacingRight=0;fillColor=#18141D;swimlaneFillColor=#18141D;fillStyle=solid;fontColor=#F0F0F0;strokeColor=#F0F0F0;fontSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="-970" y="-720" width="570" height="610" as="geometry">
+                <mxCell id="6" value="Health" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;spacingTop=0;spacingBottom=0;spacingRight=0;fillColor=#18141D;swimlaneFillColor=#18141D;fillStyle=solid;fontColor=#F0F0F0;strokeColor=#F0F0F0;fontSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="-970" y="-840" width="750" height="740" as="geometry">
                         <mxRectangle x="-791.5" y="-581" width="160" height="26" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value=" + OnDeadEvent : UnityEvent" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="60" width="570" height="50" as="geometry"/>
+                <mxCell id="8" value=" + OnDamagedEvent&lt;Health, GameObject, float&gt; : UnityEvent" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="60" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value=" + OnDamagedEvent&lt;int, int&gt; : UnityEvent" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="110" width="570" height="50" as="geometry"/>
+                <mxCell id="7" value=" + OnDeadEvent : UnityEvent" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="110" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="160" width="570" height="12" as="geometry"/>
+                <mxCell id="33" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="6">
+                    <mxGeometry y="160" width="750" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value=" - currentHP : int" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="172" width="570" height="50" as="geometry"/>
+                <mxCell id="10" value=" - currentHP : float" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="180" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value=" - maxHP : int" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="222" width="570" height="50" as="geometry"/>
+                <mxCell id="18" value=" - maxHP : float" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="230" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="272" width="570" height="12" as="geometry"/>
+                <mxCell id="25" value=" - isDead : bool" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="280" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value=" - isDead : bool" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="284" width="570" height="50" as="geometry"/>
+                <mxCell id="36" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="6">
+                    <mxGeometry y="330" width="750" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value=" &lt;get&gt; IsDead : bool" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="334" width="570" height="50" as="geometry"/>
+                <mxCell id="37" value=" &lt;get&gt; CurrentHP : float" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
+                    <mxGeometry y="350" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="384" width="570" height="8" as="geometry"/>
+                <mxCell id="30" value=" &lt;get&gt; MaxHP : float" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="400" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value=" + TakeDamage(int, GameObject) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="392" width="570" height="50" as="geometry"/>
+                <mxCell id="38" value=" &lt;get&gt; IsDead : bool" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
+                    <mxGeometry y="450" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value=" + HealHP(int, GameObject) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="442" width="570" height="50" as="geometry"/>
+                <mxCell id="11" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="500" width="750" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="492" width="570" height="12" as="geometry"/>
+                <mxCell id="12" value=" + TakeDamage(float, GameObject) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="508" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value=" - ModifyHP(int) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="504" width="570" height="50" as="geometry"/>
+                <mxCell id="23" value=" + HealHP(float, GameObject) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="558" width="750" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value=" - OnDie() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="6">
-                    <mxGeometry y="554" width="570" height="50" as="geometry"/>
+                <mxCell id="34" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="6">
+                    <mxGeometry y="608" width="750" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value=" - ModifyHP(float) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="628" width="750" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value=" - OnDie() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="678" width="750" height="50" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
