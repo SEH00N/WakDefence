@@ -1,0 +1,86 @@
+<mxfile host="65bd71144e">
+    <diagram id="Ax42ugqmAcGYFzZcnIGb" name="페이지-1">
+        <mxGraphModel dx="4268" dy="2125" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="IFocusable" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;spacingTop=0;spacingBottom=0;spacingRight=0;fillColor=#18141D;swimlaneFillColor=#18141D;fillStyle=solid;fontColor=#F0F0F0;strokeColor=#F0F0F0;fontSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="-1710" y="-790" width="470" height="340" as="geometry">
+                        <mxRectangle x="-791.5" y="-581" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value=" &lt;get&gt; CurrentObject : GameObject" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="60" width="470" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#F0F0F0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="110" width="470" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value=" + OnSelected() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="118" width="470" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value=" + OnInteracted() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="168" width="470" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="218" width="470" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value=" + OnFocusBegin() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="238" width="470" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value=" + OnFocusEnd() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="2">
+                    <mxGeometry y="288" width="470" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="PlayerFocuser" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;spacingTop=0;spacingBottom=0;spacingRight=0;fillColor=#18141D;swimlaneFillColor=#18141D;fillStyle=solid;fontColor=#F0F0F0;strokeColor=#F0F0F0;fontSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="-2290" y="-790" width="553" height="648" as="geometry">
+                        <mxRectangle x="-791.5" y="-581" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value=" - inputReader : InputReaderSO" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="60" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="110" width="553" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value=" - focusableLayer : LayerMask" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="130" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value=" - mainCamera : Camera" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="180" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="230" width="553" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value=" + OnInteractedEvent : Action&lt;IFocusable&gt;" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="250" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="300" width="553" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value=" - focusedObject : IFocusable" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="320" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value=" &lt;get&gt; FocusedObject : IFocusable" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="370" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="420" width="553" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value=" - DetectFocusableObject() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="428" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value=" - FocusObject(IFocusable) : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="478" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value=" " style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="528" width="553" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value=" - HandleLeftClick() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="548" width="553" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value=" - HandleRightClick() : void" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;fontColor=#F0F0F0;fontSize=26;" vertex="1" parent="15">
+                    <mxGeometry y="598" width="553" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
