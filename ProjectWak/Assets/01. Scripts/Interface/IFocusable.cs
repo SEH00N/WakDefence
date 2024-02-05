@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public interface IFocusable
+namespace ProjectWak.Focusing
 {
-	public GameObject CurrentObject { get; }
+    public interface IFocusable
+    {
+        public GameObject CurrentObject { get; }
 
-    public void OnSelected();
-    public void OnInteracted();
+        public void OnSelected();
+        public void OnInteracted();
 
-    public void OnFocusBegin();
-    public void OnFocusEnd();
+        public void OnFocusBegin();
+        public void OnFocusEnd();
+    }
 }

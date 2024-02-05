@@ -1,70 +1,73 @@
 using System;
 using UnityEngine;
+using ProjectWak.Focusing;
 
-public class PlayerFocurser : MonoBehaviour
+namespace ProjectWak.Player
 {
-    [SerializeField] InputReaderSO inputReader;
-
-    [Space(10f)]
-    [SerializeField] LayerMask focusableLayer = 0;
-
-    public event Action<IFocusable> OnInteractedEvent = null;
-
-	private Camera mainCamera = null;
-    
-    private IFocusable focusedObject = null;
-    public IFocusable FocusedObject => focusedObject;
-
-    private void Awake()
+    public class PlayerFocurser : MonoBehaviour
     {
-        mainCamera = Camera.main;
+        [SerializeField] InputReaderSO inputReader = null;
 
-        inputReader.OnLeftClickEvent += HandleLeftClick;
-        inputReader.OnRightClickEvent += HandleRightClick;
-    }
+        [Space(10f)]
+        [SerializeField] LayerMask focusableLayer = 0;
 
-    private void Update()
-    {
-        DetectFocusableObject();
-    }
+        public event Action<IFocusable> OnInteractedEvent = null;
 
-    private void OnDestroy()
-    {
-        inputReader.OnLeftClickEvent -= HandleLeftClick;
-        inputReader.OnRightClickEvent -= HandleRightClick;
-    }
+        private Camera mainCamera = null;
+        
+        private IFocusable focusedObject = null;
+        public IFocusable FocusedObject => focusedObject;
 
-    private void DetectFocusableObject()
-    {
-        IFocusable other = null;
-        Ray ray = mainCamera.ScreenPointToRay(inputReader.MousePosition);
-        bool rayResult = Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, focusableLayer);
+        private void Awake()
+        {
+            mainCamera = Camera.main;
 
-        if(rayResult)
-            hit.transform.TryGetComponent<IFocusable>(out other);
+            inputReader.OnLeftClickEvent += HandleLeftClick;
+            inputReader.OnRightClickEvent += HandleRightClick;
+        }
 
-        if(focusedObject != other)
-            FocusObject(other);
-    }
+        private void Update()
+        {
+            DetectFocusableObject();
+        }
 
-    private void FocusObject(IFocusable other)
-    {
-        focusedObject?.OnFocusEnd();
-        focusedObject = other;
-        focusedObject?.OnFocusBegin();
-    }
+        private void OnDestroy()
+        {
+            inputReader.OnLeftClickEvent -= HandleLeftClick;
+            inputReader.OnRightClickEvent -= HandleRightClick;
+        }
 
-    private void HandleLeftClick()
-    {
-        DetectFocusableObject();
-        focusedObject?.OnSelected();
-    }
+        private void DetectFocusableObject()
+        {
+            IFocusable other = null;
+            Ray ray = mainCamera.ScreenPointToRay(inputReader.MousePosition);
+            bool rayResult = Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, focusableLayer);
 
-    private void HandleRightClick()
-    {
-        DetectFocusableObject();
-        focusedObject?.OnInteracted();
-        OnInteractedEvent?.Invoke(focusedObject);
+            if(rayResult)
+                hit.transform.TryGetComponent<IFocusable>(out other);
+
+            if(focusedObject != other)
+                FocusObject(other);
+        }
+
+        private void FocusObject(IFocusable other)
+        {
+            focusedObject?.OnFocusEnd();
+            focusedObject = other;
+            focusedObject?.OnFocusBegin();
+        }
+
+        private void HandleLeftClick()
+        {
+            DetectFocusableObject();
+            focusedObject?.OnSelected();
+        }
+
+        private void HandleRightClick()
+        {
+            DetectFocusableObject();
+            focusedObject?.OnInteracted();
+            OnInteractedEvent?.Invoke(focusedObject);
+        }
     }
 }
-

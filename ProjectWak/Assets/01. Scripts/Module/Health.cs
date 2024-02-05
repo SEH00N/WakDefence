@@ -1,3 +1,4 @@
+using ProjectWak.Stat;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,14 +14,18 @@ namespace ProjectWak.Modules
         public float CurrentHP => currentHP;
 
         private float maxHP = 50f;
-        public float MaxHP => maxHP;
+        private float armor = 10f;
 
         private bool isDead = false;
         public bool IsDead => isDead;
 
-        public void SetMaxHP(float maxHP)
+        public void Init(BaseStatSO stat)
         {
-            this.maxHP = maxHP;
+            maxHP = stat.MaxHP.CurrentValue;
+            armor = stat.Armor.CurrentValue;
+
+            stat.MaxHP.OnValueChangedEvent += value => maxHP = value;
+            stat.Armor.OnValueChangedEvent += value => armor = value;
         }
 
         public void Reset()
@@ -34,6 +39,7 @@ namespace ProjectWak.Modules
             if(isDead)
                 return;
 
+            damage = CalculateArmor(damage);
             ModifyHP(-damage, false);
             OnHPModifiedEvent?.Invoke(this, performer, -damage);
 
@@ -55,6 +61,12 @@ namespace ProjectWak.Modules
                 currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
             
             return currentHP - prevHP;
+        }
+
+        private float CalculateArmor(float damage)
+        {
+            float factor = 100 / (100 + armor);
+            return damage * factor;
         }
 
         private void OnDie()
