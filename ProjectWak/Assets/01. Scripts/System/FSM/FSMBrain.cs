@@ -9,7 +9,7 @@ namespace ProjectWak.FSM
         // <prev, new>
         public UnityEvent<FSMState, FSMState> OnStateChangedEvent = null;
 
-        private FSMState currentState = null;
+        [SerializeField] FSMState currentState = null;
 
         private void Awake()
         {
