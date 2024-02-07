@@ -7,7 +7,7 @@ namespace ProjectWak.Structure
     {
         protected override void HandleResearched(ResearchEventType type)
         {
-            
+            // 연구 효과 적용
         }
     }
 }

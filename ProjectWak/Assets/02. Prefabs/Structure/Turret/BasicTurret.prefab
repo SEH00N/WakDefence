@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6752209683857292622}
   - component: {fileID: 417023393704989598}
   - component: {fileID: 6110099572254807722}
-  - component: {fileID: 786465581944455736}
   m_Layer: 0
   m_Name: FireTransition
   m_TagString: Untagged
@@ -60,21 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
---- !u!114 &786465581944455736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3052616248105814997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2074ee15d3ddb6942933ce5e77d0021e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isReverse: 0
-  distance: 10
-  gizmo: 1
 --- !u!1 &3482272747285067009
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf217ec1b32b164ea370217e7b68ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  containerSize: 30
   radius: 10
   targetLayer:
     serializedVersion: 2
@@ -687,6 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 5353370194333452936}
   firePos: {fileID: 6233007629766747480}
+  rotateSpeed: 15
 --- !u!1 &9159324926503822413
 GameObject:
   m_ObjectHideFlags: 0

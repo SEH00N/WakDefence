@@ -3,22 +3,24 @@ using UnityEngine;
 namespace ProjectWak.FSM.Turret
 {
     using System;
-    using System.Collections;
     using ProjectWak.Modules;
     using ProjectWak.Structure;
 
     public class TurretDetectAction : FSMAction
     {
+        [SerializeField] int containerSize = 30;
         [SerializeField] float radius = 10f;
         [SerializeField] LayerMask targetLayer = 0;
 
         private Turret turret = null;
-        private Collider[] container = new Collider[30];
+        private Collider[] container = null;
         
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
             turret = brain.GetComponent<Turret>();
+
+            container = new Collider[containerSize];
         }
 
         public override void UpdateState()

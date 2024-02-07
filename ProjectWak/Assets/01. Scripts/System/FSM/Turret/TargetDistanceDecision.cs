@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace ProjectWak.FSM.Turret
 {
-    using System.Linq;
     using ProjectWak.Structure;
 
     public class TargetDistanceDecision : FSMDecision
@@ -22,7 +21,6 @@ namespace ProjectWak.FSM.Turret
                 return false;
 
             float sqrMagnitude = (turret.Target.transform.position - turret.transform.position).sqrMagnitude;
-            Debug.Log(sqrMagnitude < (distance * distance));
             return sqrMagnitude < (distance * distance);
         }
 
