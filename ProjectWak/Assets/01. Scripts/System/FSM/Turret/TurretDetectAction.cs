@@ -3,6 +3,7 @@ using UnityEngine;
 namespace ProjectWak.FSM.Turret
 {
     using System;
+    using System.Collections;
     using ProjectWak.Modules;
     using ProjectWak.Structure;
 
@@ -30,14 +31,20 @@ namespace ProjectWak.FSM.Turret
             turret.Target = null;
 
             int detected = Physics.OverlapSphereNonAlloc(turret.transform.position, radius, container, targetLayer);
+            turret.Target = SelectTarget(detected);
+        }
+
+        private Health SelectTarget(int detected)
+        {
+            if(detected <= 0)
+                return null;
+
             if(detected > 1)
             {
                 Array.Sort(container, (a, b) => {
-                    if(a == null | b == null)
-                        return -1;
+                    float distanceA = a == null ? float.MaxValue : (transform.position - a.transform.position).sqrMagnitude;
+                    float distanceB = b == null ? float.MaxValue : (transform.position - b.transform.position).sqrMagnitude;
 
-                    float distanceA = (transform.position - a.transform.position).sqrMagnitude;
-                    float distanceB = (transform.position - b.transform.position).sqrMagnitude;
                     if(distanceA == distanceB)
                         return 0;
                     else if(distanceA > distanceB)
@@ -45,9 +52,15 @@ namespace ProjectWak.FSM.Turret
                     else return -1;
                 });
             }
+            
+            for(int i = 0; i < detected; i++)
+            {
+                Health result = container[i].GetComponent<Health>();
+                if(result != null && result.IsDead == false)
+                    return result;
+            }
 
-            if(detected > 0)
-                container[0].transform.TryGetComponent<Health>(out turret.Target);
+            return null;
         }
 
         #if UNITY_EDITOR
