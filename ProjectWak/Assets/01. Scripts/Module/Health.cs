@@ -16,7 +16,6 @@ namespace ProjectWak.Modules
         private float maxHP = 50f;
         private float armor = 10f;
 
-    [SerializeField]
         private bool isDead = false;
         public bool IsDead => isDead;
 
